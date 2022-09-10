@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block page %}
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}<br/>
+        <div>Confirm the deletion</div><br/>
+        <button>Delete</button>
+    </form>
+{% endblock %}

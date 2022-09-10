@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% bootstrap_messages %}
+
+{% block page %}
+    <form method="POST">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <button>Добавить заказ</button>
+    </form>
+{% endblock %}

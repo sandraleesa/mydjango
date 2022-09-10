@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block page %}<br/>
+    <div>
+        <hr>
+        <div>Name: {{ object.name }}</div>
+        <div>Contacts: {{ object.contacts }}</div>
+        <div>CommentsСтатус: {{ object.finished }}</div>
+        <div>Client: {{ object.client.name }}</div>
+        <hr>
+    </div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block page %}<br/>
+    <div><nav><a href="{% url 'order-create' %}">Добавить заказ</a></nav></div>
+    <hr>
+    <h1>List of the orders</h1><hr>
+    {% for order in order_list %}
+    <a href="/order/{{ order.id }}/"><div>Order:  {{  order.name }}</div></a><br/>
+    <a href="/order/update/{{ order.id }}/">Update</a>
+    <a href="/order/delete/{{ order.id }}/">Delete</a>
+    <hr>
+    {% endfor %}
+{% endblock %}
